@@ -10,11 +10,7 @@ class FiltrosLambda {
  filtrar(listaPalabras, s->s.compareTo("vaca") < 0);
  }
  //Método filtrar()
- @Override
-    public List<String> filtrar() {
-
-	List<String> sList = new ArrayList<String>();
-        
-        return sList.stream().filter(o -> o.size()).collect(Collectors.toList());
-    }
+ public  String[] filtrar(String[] lp, Predicate pred) {
+	return lp.stream().filter(pred).forEach(System.out::println);
+ }
 }
